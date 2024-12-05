@@ -192,6 +192,6 @@ a::after {
   .terminal { padding: 1rem; }
   #user-input { font-size: 14px; }
   #output { height: 300px; }
-  .code { padding: 3px; }
+  .code { padding: 3px; min-height: 250px; }
   h1 { padding-top: 30%; }
 }
