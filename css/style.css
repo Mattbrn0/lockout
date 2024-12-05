@@ -100,6 +100,7 @@ body {
   max-height: 350px;
   padding: 10px;
   border-radius: 5px;
+  overflow-y: scroll;
 }
 
 a {
@@ -148,7 +149,6 @@ a::after {
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid transparent;
-  animation: blink-cursor 0.7s step-end infinite;
 }
 
 .blink {
@@ -187,12 +187,18 @@ a::after {
 }
 
 @media (max-width: 480px) {
-  body { font-size: 0.9rem; }
+  body { font-size: 0.9rem;}
   #timer { font-size: 8rem; left: 50%; padding-top: 10%; }
   .terminal { padding: 1rem; }
   #user-input { font-size: 14px; }
   #output { height: 300px; }
   .code { padding: 3px; min-height: 250px; }
   h1 { padding-top: 30%; }
-  .terminal-message { font-size: 15px;}
+  .terminal-message { font-size: 25px; 
+    overflow-y: hidden;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  
 }
