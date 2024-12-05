@@ -92,7 +92,7 @@ body {
 #output {
   height: 350px;
   overflow: auto;
-  overflow-y: hidden;
+  overflow-y: scroll;
 }
 
 .code {
@@ -100,7 +100,6 @@ body {
   max-height: 350px;
   padding: 10px;
   border-radius: 5px;
-  overflow-y: scroll;
 }
 
 a {
@@ -187,7 +186,9 @@ a::after {
 }
 
 @media (max-width: 480px) {
-  body { font-size: 0.9rem;}
+  body { font-size: 0.9rem;
+  overflow-y: hidden;
+  overflow-x: hidden;}
   #timer { font-size: 8rem; left: 50%; padding-top: 10%; }
   .terminal { padding: 1rem; }
   #user-input { font-size: 14px; }
