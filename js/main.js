@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
            "What term refers to the action of resetting a forgotten password?",
            "[~] Next key password [I]...",
            "██▓▒▒ DEBUGGING ROOT ▒▒▓██",
-           "find the last 2 characters to unlock the computer",
+           "After finding the first letters try to guess the remaining 2 letters to complete the password",
            "FIND THE PASSWORD TO ESCAPE...",
        ];
    
