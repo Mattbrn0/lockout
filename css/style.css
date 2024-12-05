@@ -181,7 +181,7 @@ a::after {
   #timer { font-size: 10rem; left: 60%; }
   .terminal { padding: 2rem; }
   #user-input { font-size: 16px; }
-  #output { height: 200px; }
+  #output { height: 250px; }
   .code { padding: 5px; }
   h1 { padding-top: 30%; }
 }
@@ -191,7 +191,7 @@ a::after {
   #timer { font-size: 8rem; left: 50%; padding-top: 10%; }
   .terminal { padding: 1rem; }
   #user-input { font-size: 14px; }
-  #output { height: 200px; }
+  #output { height: 250px; }
   .code { padding: 3px; }
   h1 { padding-top: 30%; }
 }
