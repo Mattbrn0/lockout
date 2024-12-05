@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
                clearInterval(timerInterval);
                clearInterval(lineInterval);
                handleTimeout();
-               typeMessage("YOU LOST YOUR FILES ;)");
 
            }
        }
@@ -83,6 +82,31 @@ document.addEventListener("DOMContentLoaded", function () {
            }
        }
        let isEndMessageDisplayed = false; 
+
+       function handleTimeout() {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "black";
+
+        let blinkCount = 0;
+        const blinkInterval = setInterval(() => {
+            const opacity = blinkCount % 2 === 0 ? 1 : 0.5;
+            outputElement.style.opacity = opacity;
+            inputElement.style.opacity = opacity;
+            timerElement.style.opacity = opacity;
+            h1Element.style.opacity = opacity;
+
+            blinkCount++;
+
+            if (blinkCount >= 9) {
+                clearInterval(blinkInterval);
+                outputElement.style.display = "none";
+                inputElement.style.display = "none";
+                timerElement.style.display = "none";
+                h1Element.style.display = "none";
+                typeMessage("YOU LOST YOUR FILES");
+            }
+        }, 300);
+    }
 
        function updateRebootOutput() {
               if (currentLineIndex < rebootLines.length) {
@@ -172,6 +196,3 @@ document.addEventListener("DOMContentLoaded", function () {
    
        updateTimer();
    });
-   
-       
-   
