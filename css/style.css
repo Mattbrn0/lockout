@@ -29,8 +29,6 @@ body {
   background-size: cover;
   z-index: -1;
   opacity: .02;
-  overflow: hidden;
-
 }
 
 .overlay {
@@ -45,8 +43,6 @@ body {
     rgba(0, 0, 0, 0) 100%);
   background-size: auto 4px;
   z-index: 1;
-  overflow: hidden;
-
 }
 
 .overlay::before {
@@ -85,7 +81,6 @@ body {
   max-width: 100%;
   padding: 4rem;
   text-transform: uppercase;
-  overflow: hidden;
 
 }
 
@@ -93,15 +88,23 @@ body {
   color: rgba(255, 255, 255, 0.8);
   white-space: pre-wrap;
   text-shadow: 0 0 1px rgba(25, 27, 25, 0.4), 0 0 2px rgba(255, 255, 255, 0.8);
-  overflow: hidden;
 }
 
 #output {
   height: 350px;
   overflow: auto;
   overflow-y: scroll;
-  overflow: hidden;
+  scrollbar-width: none; /* Pour Firefox */
 }
+
+#output::-webkit-scrollbar {
+  width: 0px;
+}
+
+#output::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
 
 .code {
   max-width: 100%;
@@ -136,7 +139,6 @@ a::after {
   transform: translate(-50%, -50%);
   font-size: 30rem;
   z-index: -1;
-  overflow: hidden;
 }
 
 @keyframes typing {
@@ -157,7 +159,6 @@ a::after {
   color: rgb(48, 2, 2);
   font-size: 40px;
   white-space: nowrap;
-  overflow: hidden;
   border-right: 2px solid transparent;
 }
 
@@ -180,7 +181,6 @@ a::after {
   font-size: 20px;
   width: 100%;
   caret-color: white;
-  overflow: hidden;
 }
 
 #user-input::placeholder {
@@ -188,10 +188,7 @@ a::after {
 }
 
 @media (max-width: 768px) {
-  body { font-size: 1rem;
-    overflow: hidden;
-
-   }
+  body { font-size: 1rem;}
   #timer { font-size: 10rem; left: 60%; }
   .terminal { padding: 2rem; }
   #user-input { font-size: 16px; }
@@ -204,8 +201,6 @@ a::after {
   body { font-size: 0.9rem;
   overflow-y: hidden;
   overflow-x: hidden;
-  background-size: cover;
-
 }
   #timer { font-size: 8rem; 
   left: 50%;
