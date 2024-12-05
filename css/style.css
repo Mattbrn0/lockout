@@ -16,8 +16,7 @@ body {
   font-size: 1.5rem;
   color: rgba(247, 0, 0, 0.8);
   text-shadow: 0 0 1ex rgb(171, 0, 0), 0 0 2px rgba(255, 255, 255, 0.8);
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .noise {
@@ -30,6 +29,8 @@ body {
   background-size: cover;
   z-index: -1;
   opacity: .02;
+  overflow: hidden;
+
 }
 
 .overlay {
@@ -44,6 +45,8 @@ body {
     rgba(0, 0, 0, 0) 100%);
   background-size: auto 4px;
   z-index: 1;
+  overflow: hidden;
+
 }
 
 .overlay::before {
@@ -66,6 +69,7 @@ body {
     transparent 100%);
   background-repeat: no-repeat;
   animation: scan 7.5s linear 0s infinite;
+
 }
 
 @keyframes scan {
@@ -81,18 +85,22 @@ body {
   max-width: 100%;
   padding: 4rem;
   text-transform: uppercase;
+  overflow: hidden;
+
 }
 
 .output {
   color: rgba(255, 255, 255, 0.8);
   white-space: pre-wrap;
   text-shadow: 0 0 1px rgba(25, 27, 25, 0.4), 0 0 2px rgba(255, 255, 255, 0.8);
+  overflow: hidden;
 }
 
 #output {
   height: 350px;
   overflow: auto;
   overflow-y: scroll;
+  overflow: hidden;
 }
 
 .code {
@@ -100,6 +108,8 @@ body {
   max-height: 350px;
   padding: 10px;
   border-radius: 5px;
+  overflow: hidden;
+
 }
 
 a {
@@ -126,6 +136,7 @@ a::after {
   transform: translate(-50%, -50%);
   font-size: 30rem;
   z-index: -1;
+  overflow: hidden;
 }
 
 @keyframes typing {
@@ -169,6 +180,7 @@ a::after {
   font-size: 20px;
   width: 100%;
   caret-color: white;
+  overflow: hidden;
 }
 
 #user-input::placeholder {
@@ -176,7 +188,10 @@ a::after {
 }
 
 @media (max-width: 768px) {
-  body { font-size: 1rem; }
+  body { font-size: 1rem;
+    overflow: hidden;
+
+   }
   #timer { font-size: 10rem; left: 60%; }
   .terminal { padding: 2rem; }
   #user-input { font-size: 16px; }
@@ -188,12 +203,20 @@ a::after {
 @media (max-width: 480px) {
   body { font-size: 0.9rem;
   overflow-y: hidden;
-  overflow-x: hidden;}
-  #timer { font-size: 8rem; left: 50%; padding-top: 10%; }
+  overflow-x: hidden;
+  background-size: cover;
+
+}
+  #timer { font-size: 8rem; 
+  left: 50%;
+  padding-top: 10%;
+ }
   .terminal { padding: 1rem; }
   #user-input { font-size: 14px; }
   #output { height: 300px; }
-  .code { padding: 3px; min-height: 250px; }
+  .code { padding: 3px;
+  min-height: 250px;
+  }
   h1 { padding-top: 30%; }
   .terminal-message { font-size: 25px; 
     overflow-y: hidden;
